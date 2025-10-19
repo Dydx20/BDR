@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDR</title>
+
+     <!--AOS-->
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!--Boxicon Icon-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
+     
+    <!-- css -->
+    <link  rel="stylesheet" href="student.css">
+
+    <!-- javascript -->
+    <script src="/script/script.js"></script>
+
+</head>
+<body>
+    <!-- Header start -->
+    <header class="header">
+        <div class="content">
+            <input type="checkbox" id="show-menu">
+            <label for="show-menu" class="menu-icon"><i class="bx bx-menu icon"></i></label>
+            
+
+            <a href="home.html" class="logo">
+                <img src="img/bdrLogo.png" alt="Tinder AI Logo">
+            </a>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="course.html">Course</a></li>
+                    <li><a href="assessment.html">Assessment</a></li>
+                </ul>
+            </nav>
+
+            <div class="icon">
+
+                <div id="user-btn" class="bx bxs-user"></div>
+                
+            </div>
+
+            <div class="profile">
+                <p>Name: <span><?php echo $_SESSION['user_name'];?></span></p>
+                <p>Email: <span><?php echo $_SESSION['user_email'];?></span></p>
+                <a href="update.php" class="update-btn">Update Profile</a> 
+                <a href="logout.php" class="logout-btn" onclick="return confirm('Log out from this website?');">Log Out</a>
+            </div>
+
+        </div> 
+    </header>
+   <!--Header end -->
+
+<!-- quiz section start -->
+    <section class="quiz-wrapper">
+        <div class="quiz-container">
+            <div id="question-box">
+                <h2 id="question-text"></h2>
+                
+                <div class="choices">
+                    <button id="choiceA" class="choice">A</button>
+                    <button id="choiceB" class="choice">B</button>
+                </div>
+
+            </div>
+            <button id="generateReport"  class="hidden">Generate Report</button>
+        </div>
+    </section>
+
+
+<!--quiz section end   -->
+
+<script>
+    generateBtn.addEventListener("click", () => {
+        window.location.href = "report.html";
+    });
+</script>
+<!--Footer Start-->
+    <footer>
+        <a href="" class="logo">
+            <img src="img/bdrLogo.png" alt="J&Co. Logo">
+        </a>
+        <div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="home.html">Home</a> <!--belum-->
+                <a href="aboutus.html">About Us</a> <!--belum-->
+                <a href="course.html">Course</a> <!--belum-->
+                <a href="assessment.html">Assessment</a> <!--belum-->
+            </div>
+    
+            <div class="box">
+                <h3>extra links</h3>
+                <a href="login.php">Login</a> <!--belum-->
+                <a href="register.php">Register</a> <!--belum-->
+                <!-- <a href="cart.php">xxxxx</a> belum -->
+                <a href="admin_page.php">Admin Panel</a> <!--belum-->
+            </div>
+    
+            <div class="box">
+                <h3>contact info</h3>
+                <p> <i class="bx bxs-phone"></i> 1234567 </p>
+                <p> <i class="bx bxs-phone"></i> 7654321 </p>
+                <p> <i class="bx bxs-envelope"></i> bdr270425@gmail.com </p>
+                <p> <i class="bx bxs-map-pin"></i> KL Malaysia </p>
+            </div>
+    
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#"><i class="bx bxl-facebook-circle"></i>Facebook</a>
+                <a href="#"><i class="bx bxl-twitter"></i>Twitter</a>
+                <a href="#"><i class="bx bxl-instagram-alt"></i>Instagram</a>
+                <a href="#"><i class="bx bxl-tiktok"></i>Tiktok</a>
+            </div>
+    
+        </div>
+    
+        <div class="credit">&copy; copyright by <span>BDR</span> </div>
+    
+    </footer>
+
+    <script src="/script/script.js"></script>
+</body>
+</html>

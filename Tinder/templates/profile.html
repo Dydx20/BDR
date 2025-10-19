@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <link rel="stylesheet" href="css/register_log.css">
+</head>
+<body>
+    <div class="form-container">
+        <form action="update.php" method="post">
+            <h3>Update Profile</h3>
+            <input type="text" name="fname" placeholder="Firstname" value="<?php echo ($user['fname']); ?>" required>
+            <input type="text" name="lname" placeholder="Lastname" value="<?php echo ($user['lname']); ?>" required>
+            <input type="text" name="email" placeholder="Email" value="<?php echo ($user['email']); ?>" required>
+            <input type="submit" name="submit" value="Update" class="form-btn">
+            <p><a href="home.php">Cancel</a></p>
+        </form>
+    </div>
+
+    <div class="form-container">
+        <form action="update.php" method="post">
+            <h3>Update Profile</h3>
+            <input type="text" name="fname" placeholder="Firstname" value="<?php echo ($admin['fname']); ?>" required>
+            <input type="text" name="lname" placeholder="Lastname" value="<?php echo ($admin['lname']); ?>" required>
+            <input type="text" name="email" placeholder="Email" value="<?php echo ($admin['email']); ?>" required>
+            <input type="submit" name="submit" value="Update" class="form-btn">
+            <p><a href="admin_page.php">Cancel</a></p>
+        </form>
+    </div>
+        
+
+</body>
+</html>

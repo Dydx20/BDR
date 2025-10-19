@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDR</title>
+
+     <!--AOS-->
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!--Boxicon Icon-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
+     
+    <!-- css -->
+    <link  rel="stylesheet" href="student.css">
+
+    <!-- javascript -->
+    <script src="/script/script.js"></script>
+
+</head>
+<body>
+    <!-- Header start -->
+    <header class="header">
+        <div class="content">
+            <input type="checkbox" id="show-menu">
+            <label for="show-menu" class="menu-icon"><i class="bx bx-menu icon"></i></label>
+            
+
+            <a href="home.html" class="logo">
+                <img src="img/bdrLogo.png" alt="Tinder AI Logo">
+            </a>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="course.html">Course</a></li>
+                    <li><a href="assessment.html">Assessment</a></li>
+                </ul>
+            </nav>
+
+            <div class="icon">
+
+                <div id="user-btn" class="bx bxs-user"></div>
+                
+            </div>
+
+            <div class="profile">
+                <p>Name: <span><?php echo $_SESSION['user_name'];?></span></p>
+                <p>Email: <span><?php echo $_SESSION['user_email'];?></span></p>
+                <a href="update.php" class="update-btn">Update Profile</a> 
+                <a href="logout.php" class="logout-btn" onclick="return confirm('Log out from this website?');">Log Out</a>
+            </div>
+
+        </div> 
+    </header>
+   <!--Header end -->
+
+<!-- part 1 section start -->
+<div id="assessment-container">
+
+  <!-- Section 1 -->
+  <section class="assessment-section active">
+    <h2>Section 1 – Work Motivation</h2>
+    <p>Rank each statement from 1 (most describes you) to 5 (least describes you).</p>
+
+    <form class="assessment-form">
+      <div class="question">
+        <label>I enjoy setting ambitious goals and achieving them.</label>
+        <select name="q1">
+          <option value="">Select rank</option>
+          <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label>I prefer work that is stable and predictable.</label>
+        <select name="q2">
+          <option value="">Select rank</option>
+          <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label>I like being recognized for doing my job well.</label>
+        <select name="q3">
+          <option value="">Select rank</option>
+          <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label>I get excited by challenges that require creativity.</label>
+        <select name="q4">
+          <option value="">Select rank</option>
+          <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label>I enjoy helping others succeed at their work.</label>
+        <select name="q5">
+          <option value="">Select rank</option>
+          <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+        </select>
+      </div>
+
+      <div class="buttons">
+        <button type="button" class="next-btn" disabled>Next →</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Section 2 -->
+  <section class="assessment-section">
+    <h2>Section 2 – Problem-Solving Style</h2>
+    <p>Rank each statement from 1 (most describes you) to 5 (least describes you).</p>
+
+   
+    <form class="assessment-form">
+      
+        <div class="question">
+            <label>I prefer to find logical, step-by-step solutions.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I like to experiment and try new approaches..</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I rely on intuition when making quick decisions.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I look for data before taking any action.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I prefer to discuss the problem with others before deciding.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+        
+        <div class="buttons">
+            <button type="button" class="prev-btn">← Previous</button>
+            <button type="button" class="next-btn" disabled>Next →</button>
+        </div>
+    </form>
+  </section>
+
+
+  <!-- Section 3 -->
+  <section class="assessment-section">
+    <h2>Section 3 – Learning & Growth</h2>
+    <p>Rank each statement from 1 (most describes you) to 5 (least describes you).</p>
+
+   
+    <form class="assessment-form">
+      
+        <div class="question">
+            <label>I learn best through hands-on experience.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I prefer to study theories before trying them.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I learn quickly by observing how others do it.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I enjoy researching and understanding how things work.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I like learning by solving real-world problems.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+        
+        <div class="buttons">
+            <button type="button" class="prev-btn">← Previous</button>
+            <button type="button" class="next-btn" disabled>Next →</button>
+        </div>
+    </form>
+  </section>
+
+  <!-- Section 4 -->
+  <section class="assessment-section">
+    <h2>Section 4 – Communication & Teamwork</h2>
+    <p>Rank each statement from 1 (most describes you) to 5 (least describes you).</p>
+
+   
+    <form class="assessment-form">
+      
+        <div class="question">
+            <label>I express my thoughts clearly and confidently.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I am a good listener and understand others easily.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I prefer to work independently to avoid miscommunication.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I enjoy group discussions and brainstorming.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I like giving constructive feedback to improve teamwork.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+        
+        <div class="buttons">
+            <button type="button" class="prev-btn">← Previous</button>
+            <button type="button" class="next-btn" disabled>Next →</button>
+        </div>
+    </form>
+  </section>
+
+
+  <!-- Section 5 -->
+  <section class="assessment-section">
+    <h2>Section 5 – Leadership & Initiative</h2>
+    <p>Rank each statement from 1 (most describes you) to 5 (least describes you).</p>
+
+   
+    <form class="assessment-form">
+      
+        <div class="question">
+            <label>I naturally take charge when a group needs direction.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I prefer supporting others rather than leading.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I make decisions quickly and confidently.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I like to share responsibilities equally among team members.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I motivate others to perform at their best.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+        
+        <div class="buttons">
+            <button type="button" class="prev-btn">← Previous</button>
+            <button type="button" class="next-btn" disabled>Next →</button>
+        </div>
+    </form>
+  </section>
+
+
+  <!-- Section 6 -->
+  <section class="assessment-section">
+    <h2>Section 6 – Adaptability & Organization</h2>
+    <p>Rank each statement from 1 (most describes you) to 5 (least describes you).</p>
+
+   
+    <form class="assessment-form">
+      
+        <div class="question">
+            <label>I always plan ahead and stick to schedules.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I easily adapt when things change unexpectedly.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I like keeping things neat and structured.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I can stay calm even in chaos.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I prefer flexibility over strict routines.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+        
+        <div class="buttons">
+            <button type="button" class="prev-btn">← Previous</button>
+            <button type="button" class="next-btn" disabled>Next →</button>
+        </div>
+    </form>
+  </section>
+
+  <!-- Section 7 -->
+  <section class="assessment-section">
+    <h2>Section 7 – Optimism & Risk</h2>
+    <p>Rank each statement from 1 (most describes you) to 5 (least describes you).</p>
+
+   
+    <form class="assessment-form">
+      
+        <div class="question">
+            <label>I always see the bright side of situations.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I carefully consider potential problems before acting.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I take calculated risks to achieve my goals.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I avoid risky situations whenever possible.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I believe that things will work out even when uncertain.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+        
+        <div class="buttons">
+            <button type="button" class="prev-btn">← Previous</button>
+            <button type="button" class="next-btn" disabled>Next →</button>
+        </div>
+    </form>
+  </section>
+
+    <!-- Section 8 -->
+  <section class="assessment-section">
+    <h2>Section 8 – Career Values</h2>
+    <p>Rank each statement from 1 (most describes you) to 5 (least describes you).</p>
+
+   
+    <form class="assessment-form">
+      
+        <div class="question">
+            <label>I value financial success and independence.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I value continuous learning and growth.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I value helping others and making a difference.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I value stability and security in my career.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I value creativity and freedom in my work.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+        
+        <div class="buttons">
+            <button type="button" class="prev-btn">← Previous</button>
+            <button type="button" class="next-btn" disabled>Next →</button>
+        </div>
+    </form>
+  </section>
+
+  <!-- Section 9 -->
+  <section class="assessment-section">
+    <h2>Section 9 – Productivity & Work Style</h2>
+    <p>Rank each statement from 1 (most describes you) to 5 (least describes you).</p>
+
+   
+    <form class="assessment-form">
+      
+        <div class="question">
+            <label>I work best when I’m under pressure.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I prefer to finish one task completely before starting another.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I like having several tasks to switch between.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I enjoy fast-paced environments.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I prefer to take my time to ensure quality work.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+        
+        <div class="buttons">
+            <button type="button" class="prev-btn">← Previous</button>
+            <button type="button" class="next-btn" disabled>Next →</button>
+        </div>
+    </form>
+  </section>
+
+
+  <!-- Section 10 -->
+  <section class="assessment-section">
+    <h2>Section 10 – Collaboration Preference</h2>
+    <p>Rank each statement from 1 (most describes you) to 5 (least describes you).</p>
+
+   
+    <form class="assessment-form">
+      
+        <div class="question">
+            <label>I enjoy working closely with people from different backgrounds.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I prefer to handle tasks on my own.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I like guiding others when they need help.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I get energy from teamwork and shared goals.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I perform best when I can make my own decisions.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+        
+        <div class="buttons">
+            <button type="button" class="prev-btn">← Previous</button>
+            <button type="button" class="next-btn" disabled>Next →</button>
+        </div>
+    </form>
+  </section>
+
+
+  <!-- Section 11 -->
+  <section class="assessment-section">
+    <h2>Section 11 – Innovation & Practicality</h2>
+    <p>Rank each statement from 1 (most describes you) to 5 (least describes you).</p>
+
+   
+    <form class="assessment-form">
+      
+        <div class="question">
+            <label>I like experimenting with new ideas.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I prefer proven and structured methods.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I like improving existing systems rather than inventing new ones.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I enjoy brainstorming creative solutions.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I value results over experimentation.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+        
+        <div class="buttons">
+            <button type="button" class="prev-btn">← Previous</button>
+            <button type="button" class="next-btn" disabled>Next →</button>
+        </div>
+    </form>
+  </section>
+
+  <!-- Section 12 -->
+  <section class="assessment-section">
+    <h2>Section 12 – Emotional & Interpersonal Style</h2>
+    <p>Rank each statement from 1 (most describes you) to 5 (least describes you).</p>
+
+   
+    <form class="assessment-form">
+      
+        <div class="question">
+            <label>I stay calm even when others are upset.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I can sense when someone feels uncomfortable.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I prefer to focus on facts rather than emotions.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I empathize easily with other people’s experiences.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>I can separate personal feelings from professional decisions.</label>
+            <select name="q1">
+            <option value="">Select rank</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </div>
+        
+        <div class="buttons">
+            <button type="button" class="prev-btn">← Previous</button>
+            <button type="button" class="next-btn" disabled>Next →</button>
+        </div>
+    </form>
+  </section>
+
+  <!-- Final Step -->
+  <section class="assessment-section">
+    <h2 class="congratz">🎯 Congratulations!</h2>
+    <p class="completed">You’ve completed all 12 sections.</p>
+    <button id="part2Btn" href="Apart2.html">Proceed to Part 2: MBTI Test</button>
+  </section>
+
+</div>
+
+
+<!--part 1 section end   -->
+
+
+<!--Footer Start-->
+    <footer>
+        <a href="" class="logo">
+            <img src="img/bdrLogo.png" alt="J&Co. Logo">
+        </a>
+        <div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="home.html">Home</a> <!--belum-->
+                <a href="aboutus.html">About Us</a> <!--belum-->
+                <a href="course.html">Course</a> <!--belum-->
+                <a href="assessment.html">Assessment</a> <!--belum-->
+            </div>
+    
+            <div class="box">
+                <h3>extra links</h3>
+                <a href="login.php">Login</a> <!--belum-->
+                <a href="register.php">Register</a> <!--belum-->
+                <!-- <a href="cart.php">xxxxx</a> belum -->
+                <a href="admin_page.php">Admin Panel</a> <!--belum-->
+            </div>
+    
+            <div class="box">
+                <h3>contact info</h3>
+                <p> <i class="bx bxs-phone"></i> 1234567 </p>
+                <p> <i class="bx bxs-phone"></i> 7654321 </p>
+                <p> <i class="bx bxs-envelope"></i> bdr270425@gmail.com </p>
+                <p> <i class="bx bxs-map-pin"></i> KL Malaysia </p>
+            </div>
+    
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#"><i class="bx bxl-facebook-circle"></i>Facebook</a>
+                <a href="#"><i class="bx bxl-twitter"></i>Twitter</a>
+                <a href="#"><i class="bx bxl-instagram-alt"></i>Instagram</a>
+                <a href="#"><i class="bx bxl-tiktok"></i>Tiktok</a>
+            </div>
+    
+        </div>
+    
+        <div class="credit">&copy; copyright by <span>BDR</span> </div>
+    
+    </footer>
+</body>
+</html>
